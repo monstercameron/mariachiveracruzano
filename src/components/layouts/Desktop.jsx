@@ -10,11 +10,13 @@ class DesktopLayout extends Component {
         console.log(this.props)
         return ( 
             <Container fluid>
-                {<this.props.header/>}
-                {<this.props.menu/>}
-                {/* {<this.props.about/>}
-                {<this.props.service/>}
-                {<this.props.contact/>} */}
+                {<this.props.quick />}
+                {<this.props.header />}
+                {<this.props.menu />}
+                {<this.props.landing />}
+                {<this.props.about />}
+                {<this.props.services />}
+                {<this.props.contacts />}
             </Container>
          )
     }

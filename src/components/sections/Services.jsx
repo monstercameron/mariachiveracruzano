@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import {Row, Col} from 'reactstrap'
-class Landing extends Component {
+import { Row, Col } from 'reactstrap'
+class Services extends Component {
     constructor(props) {
         super(props)
         this.state = {  }
@@ -9,10 +9,11 @@ class Landing extends Component {
         return ( 
             <Row>
                 <Col>
-                    Landing
+                    services
                 </Col>
             </Row>
          )
     }
 }
-export default Landing
+ 
+export default Services
