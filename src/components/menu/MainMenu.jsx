@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Row, Col } from 'reactstrap'
+import './style.css'
 class MainMenu extends Component {
     constructor(props) {
         super(props)
@@ -8,12 +9,12 @@ class MainMenu extends Component {
     render() {
         return (
             <Row>
-                <Col sm={8} className='mx-auto border'>
-                    <Row className='text-center'>
-                        <Col>Home</Col>
-                        <Col>About</Col>
-                        <Col>Service</Col>
-                        <Col>Contact</Col>
+                <Col sm={8} className='mx-auto mt-1 mb-1'>
+                    <Row className='text-center text-capitalize'>
+                        <Col className='menu-item border mr-1 ml-1 p-1'>Home</Col>
+                        <Col className='menu-item border mr-1 ml-1 p-1'>About</Col>
+                        <Col className='menu-item border mr-1 ml-1 p-1'>Service</Col>
+                        <Col className='menu-item border mr-1 ml-1 p-1'>Contact</Col>
                     </Row>
                 </Col>
             </Row>
