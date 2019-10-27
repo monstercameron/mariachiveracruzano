@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import {Row, Col} from 'reactstrap'
 import flag from '../../assets/images/flag.jpg'
+import './style.css'
 class Logo extends Component {
     constructor(props) {
         super(props);
@@ -8,9 +9,9 @@ class Logo extends Component {
     }
     render() { 
         return ( 
-            <Row>
+            <Row className='logo' style={{backgroundImage:`url(${flag})`}}>
                 <Col className='m-0 p-0'>
-                    <img src={flag} alt='flag' className='img-fluid' />
+                test
                 </Col>
             </Row>
          )
