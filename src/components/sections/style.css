@@ -1,5 +1,51 @@
 .landing {
-    height: 500px;
-    color: rgb(255,255,255);
-    font-size: 1.75rem;
+  height: 500px;
+  font-size: 1.75rem;
+}
+
+.landing-textbox-contrast {
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+.landing-textbox-contrast:hover {
+  transform: scale(1.33);
+  animation-name: landing-textbox-anim;
+  animation-duration: 0.25s;
+}
+.landing-textbox {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.landing-textbox:hover {
+  transform: scale(1.33);
+  animation-name: landing-textbox-anim;
+  animation-duration: 0.25s;
+}
+@keyframes landing-textbox-anim {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.33);
+  }
+}
+
+.landing-readmore {
+  position: absolute;
+  bottom: 20px;
+  letter-spacing: 0rem;
+  font-size: 1.5rem;
+}
+.landing-readmore:hover {
+  letter-spacing: 0.5rem;
+  animation-name: readmore-anim;
+  animation-duration: 0.5s;
+}
+
+@keyframes readmore-anim {
+  from {
+    letter-spacing: 0rem;
+  }
+  to {
+    letter-spacing: 0.5rem;
+  }
 }
