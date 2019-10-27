@@ -49,3 +49,43 @@
     letter-spacing: 0.5rem;
   }
 }
+
+.image-box {
+}
+.image-box:hover {
+  transform: scale(1);
+  animation-name: image-box-anim;
+  animation-duration: 2s;
+  z-index: 2;
+}
+@keyframes image-box-anim {
+  from {
+    transform: scale(1);
+    box-shadow: 3px 2px 39px 24px rgba(0, 0, 0, 0);
+  }
+  10% {
+    transform: scale(1.5);
+    box-shadow: 3px 2px 39px 24px rgba(0, 0, 0, 0.85);
+  }
+  90% {
+    transform: scale(1.5);
+    box-shadow: 3px 2px 39px 24px rgba(0, 0, 0, 0.85);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 3px 2px 39px 24px rgba(0, 0, 0, 0);
+  }
+}
+
+.social-box {
+}
+
+.social-media-box {
+  height: 50px;
+}
+
+.social-media-item {
+}
+.social-media-item:hover {
+  cursor: pointer;
+}
