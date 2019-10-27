@@ -7,9 +7,8 @@ import {
   FormGroup,
   Label,
   Input,
-  FormText
+  // FormText
 } from "reactstrap";
-import Calendar from "react-calendar";
 import "./style.css";
 class Contacts extends Component {
   constructor(props) {
@@ -73,7 +72,6 @@ class Contacts extends Component {
       .filter(e => {
         if (e !== "undefined") return e;
       });
-      
     this.setState({ hours: selected });
   };
   summary = () => {
