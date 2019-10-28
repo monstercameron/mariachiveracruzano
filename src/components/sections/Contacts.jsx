@@ -6,7 +6,7 @@ import {
   Form,
   FormGroup,
   Label,
-  Input,
+  Input
   // FormText
 } from "reactstrap";
 import "./style.css";
@@ -14,7 +14,7 @@ class Contacts extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      month: null,
+      month: "jan",
       days: [],
       hours: { begin: null, end: null, time: null }
     };
@@ -61,9 +61,20 @@ class Contacts extends Component {
   hours = () => {
     const hoursOfDay = new Array(24).fill(null);
     return hoursOfDay.map((hour, index) => {
-      return <option key={`hour-${index}`}>{index + 1}</option>;
+      let keyIndex = index;
+      let amOrPm = "AM";
+      if (index > 11) {
+        index -= 12;
+        amOrPm = "PM";
+      }
+      return (
+        <option key={`hour-${keyIndex}`}>
+          {index + 1}:00 {amOrPm}
+        </option>
+      );
     });
   };
+  //needs to count the length and store start and end
   setHours = e => {
     const selected = Array.from(e.target.options)
       .map(e => {
@@ -72,10 +83,28 @@ class Contacts extends Component {
       .filter(e => {
         if (e !== "undefined") return e;
       });
-    this.setState({ hours: selected });
+
+    this.setState({
+      hours: {
+        begin: selected[0],
+        end:
+          parseInt(selected[selected.length - 1].split(":")[0]) +
+          1 +
+          ":" +
+          selected[selected.length - 1].split(":")[1],
+        time: selected.length
+      }
+    });
   };
   summary = () => {
-    if (this.state.month && this.state.days && this.state.hours) {
+    if (this.state.month && this.state.days && this.state.hours.time) {
+      return (
+        <Col>
+          {this.state.month}
+          {this.state.days.map(day => day).join(" ,")}&nbsp; from{" "}
+          {this.state.hours.begin} to {this.state.hours.end}
+        </Col>
+      );
     }
   };
   render() {
@@ -170,9 +199,7 @@ class Contacts extends Component {
                   <Input type="textarea" name="text" id="formTextArea" />
                 </FormGroup>
                 {/* summary */}
-                <Row className="mb-3">
-                  <Col>test</Col>
-                </Row>
+                <Row className="mb-3">{this.summary()}</Row>
                 <Button color="primary" className="btn-block">
                   Submit
                 </Button>
