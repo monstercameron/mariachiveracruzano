@@ -13,8 +13,9 @@ class DesktopLayout extends Component {
             this.props.menu,
             this.props.landing,
             this.props.about,
-            this.props.services,
-            this.props.contacts
+            //disabled to load faster
+            // this.props.services,
+            // this.props.contacts
         ]
         return contentComponents.map((Component, index) => {
             return <Component key={`section-${index}`} {...this.props} />
