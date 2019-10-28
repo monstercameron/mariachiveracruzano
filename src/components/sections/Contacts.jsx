@@ -16,7 +16,8 @@ class Contacts extends Component {
     this.state = {
       month: "jan",
       days: [],
-      hours: { begin: null, end: null, time: null }
+      hours: { begin: null, end: null, time: null },
+      status: null
     };
   }
   onChange = date => this.setState({ date });
@@ -107,6 +108,26 @@ class Contacts extends Component {
       );
     }
   };
+  handleSubmit = e => {
+    // console.log(e.target);
+    e.preventDefault();
+    const form = e.target;
+    const data = new FormData(form);
+    console.log(data)
+    const xhr = new XMLHttpRequest();
+    xhr.open(form.method, form.action);
+    xhr.setRequestHeader("Accept", "application/json");
+    xhr.onreadystatechange = () => {
+      if (xhr.readyState !== XMLHttpRequest.DONE) return;
+      if (xhr.status === 200) {
+        form.reset();
+        this.setState({ status: "SUCCESS" });
+      } else {
+        this.setState({ status: "ERROR" });
+      }
+    };
+    xhr.send(data);
+  };
   render() {
     console.log(this.state);
     return (
@@ -126,7 +147,11 @@ class Contacts extends Component {
           </Row>
           <Row>
             <Col>
-              <Form>
+              <Form
+                onSubmit={this.handleSubmit}
+                action="https://formspree.io/mlerwypa"
+                method="POST"
+              >
                 {/* name */}
                 <FormGroup>
                   <Label for="formName">Name</Label>
