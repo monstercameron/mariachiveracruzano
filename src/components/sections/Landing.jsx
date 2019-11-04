@@ -18,14 +18,11 @@ class Landing extends Component {
             <Col sm={7} className=" mt-5 mb-3 rounded p-2 landing-textbox-contrast mx-auto shadow">
               {text.landing[this.props.lang].text1}
             </Col>
-            <Col sm={10} className=" mt-3 mb-3 rounded p-2 landing-textbox-contrast mx-auto shadow">
+            <Col sm={10} className=" mt-5 mb-3 rounded p-2 landing-textbox-contrast mx-auto shadow">
               {text.landing[this.props.lang].text2}
             </Col>
-            <Col sm={6} className=" mt-3 mb-5 rounded p-2 landing-textbox-contrast mx-auto shadow">
+            <Col sm={6} className=" mt-5 mb-5 rounded p-2 landing-textbox-contrast mx-auto shadow">
               {text.landing[this.props.lang].text3}
-            </Col>
-            <Col sm={12} className="mt-5 rounded p-2 shadow landing-textbox-contrast landing-readmore text-capitalize">
-              {text.landing[this.props.lang].text4}
             </Col>
           </Row>
         </Col>

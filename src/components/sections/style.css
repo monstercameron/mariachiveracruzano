@@ -1,5 +1,4 @@
 .landing {
-  height: 500px;
   font-size: 1.75rem;
 }
 
@@ -88,4 +87,53 @@
 }
 .social-media-item:hover {
   cursor: pointer;
+}
+
+.about-bg {
+  background-size: cover;
+}
+
+.about-group {
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+.about-box {
+  font-size: 1.5rem;
+}
+
+.about-item {
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+.about-item:hover {
+  transform: scale(1.05);
+  font-size: 1.75rem;
+  animation-name: about-item-anim;
+  animation-duration: 0.25s;
+}
+
+@keyframes about-item-anim {
+  from {
+    transform: scale(1);
+    font-size: 1.5rem;
+  }
+  to {
+    transform: scale(1.05);
+    font-size: 1.75rem;
+  }
+}
+
+.about-item-link {
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+.about-item-link:hover {
+  transform: scale(1.05);
+  font-size: 1.75rem;
+  border:solid;
+  text-decoration: underline;
+  background-color: rgba(255, 255, 255, 0.75);
+  animation-name: about-item-anim;
+  animation-duration: 0.25s;
 }
