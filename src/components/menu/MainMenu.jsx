@@ -10,11 +10,11 @@ class MainMenu extends Component {
         return (
             <Row>
                 <Col sm={8} className='mx-auto mt-1 mb-1'>
-                    <Row className='text-center text-capitalize'>
-                        <Col className='menu-item border mr-1 ml-1 p-1'>Home</Col>
-                        <Col className='menu-item border mr-1 ml-1 p-1'>About</Col>
-                        <Col className='menu-item border mr-1 ml-1 p-1'>Service</Col>
-                        <Col className='menu-item border mr-1 ml-1 p-1'>Contact</Col>
+                    <Row className='text-center text-'>
+                        <Col className='menu-item rounded mr-1 ml-1 p-1 pt-2 pb-2'>Home</Col>
+                        <Col className='menu-item rounded mr-1 ml-1 p-1 pt-2 pb-2'>About</Col>
+                        <Col className='menu-item rounded mr-1 ml-1 p-1 pt-2 pb-2'>Service</Col>
+                        <Col className='menu-item rounded mr-1 ml-1 p-1 pt-2 pb-2'>Contact</Col>
                     </Row>
                 </Col>
             </Row>
