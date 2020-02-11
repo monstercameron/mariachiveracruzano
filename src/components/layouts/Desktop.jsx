@@ -1,33 +1,23 @@
-import React, { Component } from 'react'
-import { Container } from 'reactstrap'
-import './style.css'
-class DesktopLayout extends Component {
-    constructor(props) {
-        super(props)
-        this.state = {}
-    }
-    content = () => {
-        const contentComponents = [
-            this.props.quick,
-            this.props.header,
-            this.props.menu,
-            this.props.landing,
-            this.props.about,
-            //disabled to load faster
-            // this.props.services,
-            // this.props.contacts
-        ]
-        return contentComponents.map((Component, index) => {
-            return <Component key={`section-${index}`} {...this.props} />
-        })
-    }
-    render() {
-        // console.log(this.props)
-        return (
-            <Container fluid>
-                {this.content()}
-            </Container>
-        )
-    }
-}
-export default DesktopLayout
+import React from "react";
+import { Container } from "reactstrap";
+import "./style.css";
+const DesktopLayout = props => {
+  const content = () => {
+    return [
+      props.quick,
+      props.header,
+      props.menu,
+      props.landing,
+      props.about
+      //disabled to load faster
+      //props.services,
+      //props.contacts,
+      //props.footer
+    ].map((Component, index) => {
+      return <Component key={`section-${index}`} {...props} />;
+    });
+  };
+  console.log(props);
+  return <Container fluid>{content()}</Container>;
+};
+export default DesktopLayout;

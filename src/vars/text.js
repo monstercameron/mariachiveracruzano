@@ -1,11 +1,11 @@
 export default {
   quick: {
-    eng: { lang: "Espanol", call: "call us at " },
+    en: { lang: "Espanol", call: "call us at " },
     es: { lang: "English", call: "LLÁMENOS " },
     number: 9999999999
   },
   landing: {
-    eng: {
+    en: {
       text1: "WE ARE YOUR MARIACHI",
       text2: "Serving the greater South Florida area",
       text3: "for over 20 years!"
@@ -17,7 +17,7 @@ export default {
     }
   },
   about: {
-    eng: {
+    en: {
       text1: "30 minute session",
       text2: "1 hour sessions",
       text3: "multiple hours",

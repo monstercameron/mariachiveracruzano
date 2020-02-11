@@ -13,9 +13,9 @@ class Services extends Component {
                     width="100%"
                     height="500px"
                     src="https://www.youtube.com/embed/videoseries?list=UUDJ8qtBDbQADa7k4zaFNK0w"
-                    frameborder="0"
+                    frameBorder="0"
                     allow="autoplay; encrypted-media"
-                    allowfullscreen
+                    allowFullScreen
                 ></iframe>
             )
         };
@@ -31,7 +31,7 @@ class Services extends Component {
                 /\.(png|jpe?g|svg)$/
             )
         );
-        console.log(images);
+        //console.log(images);
         return images.map((image, index) => {
             return (
                 <Col sm={2} className="m-0 p-0 image-box" key={`bg-image-col-${index}`}>

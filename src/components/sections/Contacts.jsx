@@ -20,6 +20,12 @@ class Contacts extends Component {
       status: null
     };
   }
+  
+  
+  
+  // SCRAP THIS FOR A DATE PICKER!
+
+
   onChange = date => this.setState({ date });
   months = () => {
     //replace with months in vars.js
@@ -51,12 +57,9 @@ class Contacts extends Component {
   };
   setDays = e => {
     const selected = Array.from(e.target.options)
-      .map(e => {
-        if (e.selected) return e.value;
-      })
-      .filter(e => {
-        if (e !== "undefined") return e;
-      });
+      .filter(e => e.selected)
+      .filter(e => e !== "undefined")
+      .map(e => e.value);
     this.setState({ days: selected });
   };
   hours = () => {
@@ -78,12 +81,9 @@ class Contacts extends Component {
   //needs to count the length and store start and end
   setHours = e => {
     const selected = Array.from(e.target.options)
-      .map(e => {
-        if (e.selected) return e.value;
-      })
-      .filter(e => {
-        if (e !== "undefined") return e;
-      });
+      .filter(e => e.selected)
+      .filter(e => e !== "undefined")
+      .map(e => e.value);
 
     this.setState({
       hours: {
@@ -101,8 +101,8 @@ class Contacts extends Component {
     if (this.state.month && this.state.days && this.state.hours.time) {
       return (
         <Col>
-          {this.state.month}
-          {this.state.days.map(day => day).join(" ,")}&nbsp; from{" "}
+          {this.state.month}&nbsp;
+          {this.state.days.map(day => day).join(", ")}&nbsp; from{" "}
           {this.state.hours.begin} to {this.state.hours.end}
         </Col>
       );
@@ -113,7 +113,7 @@ class Contacts extends Component {
     e.preventDefault();
     const form = e.target;
     const data = new FormData(form);
-    console.log(data)
+    console.log(data);
     const xhr = new XMLHttpRequest();
     xhr.open(form.method, form.action);
     xhr.setRequestHeader("Accept", "application/json");
