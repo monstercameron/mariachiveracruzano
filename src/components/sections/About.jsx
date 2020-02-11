@@ -3,8 +3,9 @@ import { Row, Col } from "reactstrap";
 import bg from "../../assets/images/bw-guitar.jpg";
 import anImg from "../../assets/images/instafeed/0.jpg";
 import text from "../../vars/text";
+import UseLang from "../../hooks/useLang";
 const About = props => {
-  const { getLang } = props;
+  const [getLang] = UseLang()
   return (
     <Row className="about-bg" style={{ backgroundImage: `url(${bg})` }}>
       <Col

@@ -3,8 +3,9 @@ import { Row, Col } from "reactstrap";
 import text from "../../vars/text";
 import bg from "../../assets/images/bw-guitar.jpg";
 import "./style.css";
+import UseLang from "../../hooks/useLang";
 const Landing = props => {
-  const { getLang } = props;
+  const [getLang] = UseLang();
   return (
     <Row
       className="landing text-dark"

@@ -1,9 +1,8 @@
-import React, { useContext } from "react";
+import React from "react";
 import { HashRouter, Route } from "react-router-dom";
 import HomePage from "./components/pages/Home";
 import GlobalProvider from "./context/GlobalContext";
 function App() {
-  // const [state, setState] = useContext
   return (
     <GlobalProvider>
       <HashRouter>
