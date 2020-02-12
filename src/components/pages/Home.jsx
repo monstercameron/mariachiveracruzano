@@ -13,9 +13,9 @@ const HomePage = props => {
     <Layout>
       <QuickLinks />
       <Logo />
-      <Menu />
+      {/* {/* <Menu /> */}
       <Landing />
-      <About />
+      <About /> */}
       {/* <Services />
       <Contacts /> */}
     </Layout>

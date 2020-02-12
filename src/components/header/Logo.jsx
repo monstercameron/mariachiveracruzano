@@ -1,16 +1,15 @@
 import React from "react";
 import { Row, Col } from "reactstrap";
 import flag from "../../assets/images/flag.jpg";
-import "./style.css";
+import style from "./Logo.module.css";
 const Logo = () => {
   return (
-    <Row className="logo" style={{ backgroundImage: `url(${flag})` }}>
-      <Col sm={8} className="mx-auto text-center logo-font">
-        <Row>
-          <Col className="logo-title font-satisfy p-2 rounded">
-            Mariachi Veracruzano
-          </Col>
-        </Row>
+    <Row
+      className={`${style.logo}`}
+      style={{ backgroundImage: `url(${flag})` }}
+    >
+      <Col className={`align-self-center ${style.banner} ${style.fontBanner}`}>
+        Mariachi Veracruzano
       </Col>
     </Row>
   );
