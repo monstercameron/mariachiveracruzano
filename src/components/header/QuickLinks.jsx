@@ -5,8 +5,6 @@ import style from "./QuickLinks.module.css";
 import UseLang from "../../hooks/useLang";
 const QuickLinks = props => {
   const [getLang, switchLang] = UseLang();
-  let test = getLang();
-  if (test !== getLang()) console.log("updated!");
   return (
     <Row className={`${style.links} p-0`}>
       <Col
@@ -29,20 +27,3 @@ const QuickLinks = props => {
   );
 };
 export default QuickLinks;
-
-/* <Row className="text-center">
-      <Col
-        sm={"auto"}
-        className={`mr-auto quick-link m-1 border text-capitalize ${style.pointer}`}
-        onClick={switchLang}
-      >
-        {text.quick[getLang()].lang}
-      </Col>
-      <Col
-        sm={"auto"}
-        className="ml-auto m-1 quick-link border text-capitalize"
-      >
-        {text.quick[getLang()].call}{" "}
-        <a href={`tel:${text.quick.number}`}>{text.quick.number}</a>
-      </Col>
-    </Row> */
