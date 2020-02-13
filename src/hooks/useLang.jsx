@@ -4,8 +4,8 @@ const useLang = () => {
   const [{ lang }, setState] = useContext(GlobalContext);
   const getLang = useCallback(() => lang, [lang]);
   const switchLang = useCallback(
-    () => setState(s => ({ ...s, lang: lang === "en" ? "es" : "en" })),
-    [lang, setState]
+    () => setState(s => ({ ...s, lang: s.lang === "en" ? "es" : "en" })),
+    [setState]
   );
   return [getLang, switchLang];
 };

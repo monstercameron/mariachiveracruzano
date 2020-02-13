@@ -4,6 +4,20 @@ export default {
     es: { lang: "English", call: "LLÁMENOS " },
     number: 9999999999
   },
+  menu: {
+    en: {
+      text1: "home",
+      text2: "about me",
+      text3: "services",
+      text4: "contacts"
+    },
+    es: {
+      text1: "hogar",
+      text2: "sobre mí",
+      text3: "servicios",
+      text4: "contactos"
+    }
+  },
   landing: {
     en: {
       text1: "WE ARE YOUR MARIACHI",
