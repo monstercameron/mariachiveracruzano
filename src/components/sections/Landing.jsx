@@ -7,31 +7,29 @@ import UseLang from "../../hooks/useLang";
 const Landing = props => {
   const [getLang] = UseLang();
   return (
-    <Row className={`${style.background} p-2 pb-3`}>
-      <Col sm={'auto'} className={`mx-auto`}>
+    <Row className={`${style.background} p-3`}>
+      <Col sm={"auto"} className={`mx-auto`}>
         <Col className={`p-0 ml-4 ${style.container} mx-auto`}>
-          <div className={`${style.el4}`}>
-            <Row className={``}>
-              <img
-                src={`https://via.placeholder.com/300`}
-                className={`d-inline-block img-fluid`}
-                alt="image alt label goes here"
-                height='100%'
-                width='100%'
-              />
-            </Row>
+          <div className={`${style.el4} m-0 p-0`}>
+            <img
+              src={`https://via.placeholder.com/300`}
+              className={`d-inline-block img-fluid`}
+              alt="image alt label goes here"
+              height="100%"
+              width="100%"
+            />
           </div>
-          <div className={`border shadow p-2 ${style.el1}`}>
+          <div className={` shadow p-2 m-0 ${style.el1}`}>
             <Row className={`h-100`}>
               <Col className={`my-auto`}>{text.landing[getLang()].text1}</Col>
             </Row>
           </div>
-          <div className={`border shadow p-2 ${style.el2}`}>
+          <div className={` shadow p-2 m-0 ${style.el2}`}>
             <Row className={`h-100`}>
               <Col className={`my-auto`}>{text.landing[getLang()].text2}</Col>
             </Row>
           </div>
-          <div className={`border shadow p-2 ${style.el3}`}>
+          <div className={` shadow p-2 m-0 ${style.el3}`}>
             <Row className={`h-100`}>
               <Col className={`my-auto`}>{text.landing[getLang()].text3}</Col>
             </Row>

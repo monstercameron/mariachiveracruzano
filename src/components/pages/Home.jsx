@@ -15,7 +15,7 @@ const HomePage = props => {
       <Logo />
       <Menu />
       <Landing />
-      {/* <About /> */}
+      {/* <About />
       {/* <Services />
       <Contacts /> */}
     </Layout>

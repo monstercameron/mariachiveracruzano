@@ -9,7 +9,7 @@ const QuickLinks = props => {
     <Row className={`${style.links} p-0`}>
       <Col
         sm={"auto"}
-        className={`mr-auto text-left ${style.icon} ${style.pointer}`}
+        className={`mr-auto text-left text-uppercase ${style.icon} ${style.pointer}`}
       >
         <i className="material-icons" onClick={switchLang}>
           language
@@ -20,7 +20,9 @@ const QuickLinks = props => {
         sm={"auto"}
         className={`ml-auto text-right ${style.icon} ${style.pointer}`}
       >
-        <span className={`text-capitalize`}>{text.quick[getLang()].call}</span>
+        <span className={`d-inline-block`} style={{ textTransform: "initial" }}>
+          {text.quick[getLang()].call}
+        </span>
         <i className="material-icons">phone</i>
       </Col>
     </Row>
