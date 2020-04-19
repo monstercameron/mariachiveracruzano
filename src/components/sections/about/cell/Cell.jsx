@@ -3,12 +3,14 @@ import React, { useEffect, useState } from "react";
 import { Animated } from "react-animated-css";
 const About = ({ image, hidden, direction = "Y", timer }) => {
   const [tick, setTick] = useState(hidden);
+  let interval;
   useEffect(() => {
-    setInterval(() => {
+    clearInterval(interval);
+    interval = setInterval(() => {
       setTick(!tick);
     }, timer);
-  }, [tick]);
-  let anim = [`flipIn${direction}`, `flipOut${direction}`,`fadeIn`,`fadeOut`];
+  }, []);
+  let anim = [`flipIn${direction}`, `flipOut${direction}`, `fadeIn`, `fadeOut`];
   return (
     <Animated
       animationIn={anim[2]}

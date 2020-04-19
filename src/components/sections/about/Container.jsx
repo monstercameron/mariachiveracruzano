@@ -16,7 +16,7 @@ const Container = () => {
   const randomChance = (chancePercent) =>
     Math.random() >= 1 - chancePercent / 100;
 
-  const randomTime = (min = 10000, max = 15000) =>
+  const randomTime = (min = 5000, max = 10000) =>
     Math.floor(Math.random() * (max - min)) + min;
 
   return (
