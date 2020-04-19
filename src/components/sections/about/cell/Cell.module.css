@@ -1,0 +1,51 @@
+/* flipping animation */
+@keyframes flipY {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(180deg);
+  }
+}
+
+@keyframes flipX {
+  from {
+    transform: rotateX(180deg);
+  }
+  to {
+    transform: rotateX(0deg);
+  }
+}
+
+.onFlipMeY {
+  animation-name: flipY;
+  animation-timing-function: ease-in;
+  animation-duration: .5s;
+  transform: rotateY(180deg);
+}
+
+.onFlipMeX {
+  animation-name: flipX;
+  animation-timing-function: ease-in;
+  animation-duration: .5s;
+  transform: rotateX(0deg);
+}
+
+.reverse {
+  animation-direction: reverse;
+}
+
+.container {
+  height: 10em;
+  position: relative;
+}
+
+.child {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}

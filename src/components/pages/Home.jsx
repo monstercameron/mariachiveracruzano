@@ -5,9 +5,9 @@ import Logo from "../header/Logo";
 import Menu from "../menu/MainMenu";
 import QuickLinks from "../header/QuickLinks";
 import Landing from "../sections/Landing";
-import About from "../sections/About";
-// import Services from "../sections/Services";
-// import Contacts from "../sections/Contacts";
+import About from "../sections/about/Container";
+import Services from "../sections/Services";
+import Contacts from "../sections/Contacts";
 const HomePage = props => {
   return (
     <Layout>
@@ -15,9 +15,9 @@ const HomePage = props => {
       <Logo />
       <Menu />
       <Landing />
-      {/* <About />
-      {/* <Services />
-      <Contacts /> */}
+      <About/>
+      <Services />
+      <Contacts />
     </Layout>
   );
 };
